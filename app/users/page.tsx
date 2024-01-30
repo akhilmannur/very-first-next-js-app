@@ -4,7 +4,8 @@ const UsersPage = async() => {
 
   interface User{
     id:number,
-    name:string
+    name:string,
+    email:string,
   }
 
 const res= await fetch('https://jsonplaceholder.typicode.com/users')
@@ -21,6 +22,7 @@ const users: User[] =await res.json();
            <li key={user.id} >
               {user.name}
               {user.id}
+              {user.email}
            </li>
            
           ))
