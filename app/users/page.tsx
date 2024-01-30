@@ -20,7 +20,9 @@ const users: User[] =await res.json();
           users.map((user)=>(
            <li key={user.id} >
               {user.name}
+              {user.id}
            </li>
+           
           ))
         }
       </ul>
